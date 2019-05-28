@@ -1,0 +1,12 @@
+table,th,td{
+    border: 1px solid black;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 100px;
+    padding-bottom: 20px;
+  }
+  

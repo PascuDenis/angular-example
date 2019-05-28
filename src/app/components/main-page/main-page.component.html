@@ -1,0 +1,28 @@
+<div class="flex-container">
+
+  <label for="id">ID: </label>
+  <input [value]="id" (input)="id = $event.target.value" type="text" id="id">
+  <label for="name">Nume</label>
+  <input [value]="name" (input)="name = $event.target.value" type="text" id="name">
+  <label for="age">Varsta</label>
+  <input [value]="age" (input)="age = $event.target.value" type="text" id="age">
+  <button type="button" (click)="adaugaParticipant()" id="addButton">Adauga</button>
+  <button type="button" (click)="stergereParticipant()" id="deleteButton">Stergere</button>
+  <button type="button" (click)="updateParticipant()" id="updateButton">Update</button>
+
+</div>
+
+<div id="errorDiv" class="errorDiv" *ngIf="error"><p>{{errorMessage}}</p></div>
+
+<table class="tableProps" id="noteTable">
+  <tr>
+    <th>ID</th>
+    <th>Nume</th>
+    <th>Varsta</th>
+  </tr>
+  <tr *ngFor="let participant of participants">
+    <td>{{participant.id}}</td>
+    <td>{{participant.name}}</td>
+    <td>{{participant.age}}</td>
+  </tr>
+</table>
